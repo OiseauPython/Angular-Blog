@@ -1,4 +1,12 @@
-<h2>
-  Articles
-</h2>
+<div class="border border-primary">
+    <h2>
+        Articles
+    </h2> 
+    <ul class="list-group">
+            <!--<app-article [titre]="pageTitle"></app-article>-->
+            <!-- <li >{{post[0].title}}</li> -->
+    </ul>
+
+    <app-post-list-item-component [post] = "post"></app-post-list-item-component>
+</div>
 
