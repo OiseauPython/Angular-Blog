@@ -13,7 +13,7 @@ export class PostListItemComponentComponent implements OnInit {
 
 	@Input() post; //
 
-	//Functions for +1 -1 buttons but which return nothing (I don't know why)x
+	//Functions for +1 -1 buttons but which return nothing (I don't know why)
 	/*
 	onVoteGood() {
 		this.post.loveIt = this.post.loveIt + 1;
