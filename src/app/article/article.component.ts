@@ -11,9 +11,7 @@ import {
 })
 export class ArticleComponent implements OnInit {
 
-  @Input() post;
-
-  
+  @Input() post; //Recept of the array from the root component
 
   constructor() {}
 
