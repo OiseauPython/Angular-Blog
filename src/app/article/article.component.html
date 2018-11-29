@@ -3,7 +3,11 @@
         Articles
     </h2> 
     <ul class="list-group">
-			<app-post-list-item-component [post] = "post"></app-post-list-item-component>
+			<!-- <app-post-list-item-component [post] = "post"></app-post-list-item-component> --> 
+			<app-post-list-item-component *ngFor="let post of post"
+			[postTitle]="post.title"
+			[postContent]="post.content"
+			[postLoveIt]="post.loveIt"
+			[postDate]="post.createAt"></app-post-list-item-component>
 	</ul>
 </div>
-

@@ -1,17 +1,17 @@
-<div class="article" *ngFor="let post of post"> <!--loop over the entire post array-->
+<div class="article"> <!--loop over the entire post array-->
 	<ul [ngClass]="{ 
 		'list-group-item' : true,
-		'list-group-item-success' : post.loveIt >= 1,
-		'list-group-item-danger' : post.loveIt < 0
+		'list-group-item-success' : postLoveIt >= 1,
+		'list-group-item-danger' : postLoveIt < 0
 	}"> <!--color selector with the like counter (0 like is neutral)-->
 	<div class="postTitleAndDate">
-		<h3>{{post.title}}</h3> <!--display the title of the article-->
-		<p class="text-right">{{post.createAt | date: 'd/M/y hh:mm '}}</p> <!--display the date of the article-->
+		<h3>{{postTitle}}</h3> <!--display the title of the article-->
+		<p class="text-right">{{postDate | date: 'd/M/y hh:mm '}}</p> <!--display the date of the article-->
 	</div>
-	<li>{{post.content}}</li> <!--display the content of the article-->
+	<li>{{postContent}}</li> <!--display the content of the article-->
 	<li> - </li>
-	<li>Your votes : {{post.loveIt}}</li> <!--display the votes of the article-->
-	<button (click)="post.loveIt = post.loveIt + 1" class="btn-success">Good ! +1</button> <!-- +1 button-->
-	<button (click)="post.loveIt = post.loveIt - 1" class="btn-danger">Bad -1</button> <!-- -1 button-->
+	<li>Your votes : {{postLoveIt}}</li> <!--display the votes of the article-->
+	<button (click)="postLoveIt = postLoveIt + 1" class="btn-success">Good ! +1</button> <!-- +1 button-->
+	<button (click)="postLoveIt = postLoveIt - 1" class="btn-danger">Bad -1</button> <!-- -1 button-->
 	</ul>
 </div>
