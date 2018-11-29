@@ -11,7 +11,10 @@ import {
 })
 export class PostListItemComponentComponent implements OnInit {
 
-	@Input() post; //
+	@Input() postTitle:string; //
+	@Input() postContent:string; //
+	@Input() postLoveIt:string; //
+	@Input() postDate:string; //
 
 	//Functions for +1 -1 buttons but which return nothing (I don't know why)
 	/*
